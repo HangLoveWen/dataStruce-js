@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    var countBits = function (n) {
+      let res = []
+      for (let num = 0; num <= n; num++) {
+        let twoNum = num.toString(2)
+        console.log(twoNum);
+        let cnt = 0
+        for (let ch of twoNum) {
+          if (ch === '1') cnt++
+        }
+        res.push(cnt)
+      }
+      return res
+    };
+    console.log(countBits(5));
+  </script>
+</body>
+
+</html>

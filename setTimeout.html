@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // function sayHi(pharse, who) {
+    //   console.log(pharse + ',' + who);
+    // }
+    // let timer = setInterval(sayHi, 1000, 'Hello', 'John')
+    // console.log(timer)
+    // clearInterval(timer)
+    // console.log(timer)
+    // let timerId = setInterval(() => console.log('click'), 2000)
+    // setTimeout(() => {
+    //   clearInterval(timerId)
+    //   console.log('clickstop')
+    // }, 5000)
+    let printNumber = function (from, to) {
+      let timer = setTimeout(function f() {
+        if (from <= to) {
+          console.log(from++)
+        } else {
+          clearTimeout(timer)
+        }
+        setTimeout(f, 1000)
+      }, 1000)
+    }
+    // let printNumber = function (from, to) {
+    //   let timer = setInterval(() => {
+    //     if (from != to) {
+    //       console.log(from++);
+    //     } else {
+    //       clearInterval(timer)
+    //     }
+    //   }, 1000, from, to)
+    // }
+    printNumber(1, 10)
+  </script>
+</body>
+
+</html>

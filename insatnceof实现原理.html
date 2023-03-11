@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    let instance = function (left, right) {
+      if (typeof left !== 'object' || typeof left === 'undefined') return false
+      let props = Object.getProptypeof(left)
+      if (props == null) return false
+      if (props === right.proptype) {
+        return true
+      }
+      props = Object.getPrototypeOf(props)
+    }
+  </script>
+</body>
+
+</html>

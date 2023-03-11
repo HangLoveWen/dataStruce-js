@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    // function sayHi() {
+    //   alert('sayHi')
+    // }
+    // alert(sayHi.name)
+    // let sayHi2 = function () {
+    //   alert('sayHi2')
+    // }
+    // alert(sayHi2.name)
+    // function f(sayHi3 = function () { }) {
+    //   alert('sayHi3')
+    // }
+    // f()
+    // function ask(question, ...handlers) {
+    //   let isYes = confirm(question);
+
+    //   for (let handler of handlers) {
+    //     if (handler.length == 0) {
+    //       if (isYes) handler();
+    //     } else {
+    //       handler(isYes);
+    //     }
+    //   }
+
+    // }
+
+    // // 对于肯定的回答，两个 handler 都会被调用
+    // // 对于否定的回答，只有第二个 handler 被调用
+    // ask("Question?", () => alert('You said yes'), result => alert(result));
+    // function ask(quesition, ...handlers) {
+    //   let isYes = confirm(quesition)
+    //   for (let handler of handlers) {
+    //     if (handler.length == 0) {
+    //       if (isYes)
+    //         handler();
+    //     } else {
+    //       handler(isYes)
+    //     }
+    //   }
+    // }
+    // ask('Question', () => { alert('Yes') }, (result) => { alert(result) })
+    // let sayHi4 = function fnc(who) {
+    //   if (who) {
+    //     alert(`Hello,${who}`)
+    //   } else {
+    //     fnc('Guest')
+    //   }
+    // }
+    // sayHi4('John')
+    // sayHi4()
+    // function makeCounter() {
+    //   // 不需要这个了
+    //   // let count = 0
+    //   counter.count = 0;
+    //   function counter() {
+    //     return counter.count++;
+    //     // counter.prototype.set = (value) => {
+    //     //   counter.count = value
+    //     // }
+    //     // counter.prototype.decrease = () => {
+    //     //   counter.count -= 1
+    //     // }
+    //   };
+    //   counter.set = (value) => {
+    //     count = value
+    //   }
+    //   counter.decrease() =。{
+    //     count -= 1
+    //   }
+    //   return counter;
+    // }
+    let sum = function (a) {
+      let current = a
+      function f(b) {
+        current += b
+        return f
+      }
+      f.toString = function () {
+        return current
+      }
+      return f
+    }
+    alert(sum(1)(2)(3))
+  </script>
+</body>
+
+</html>
